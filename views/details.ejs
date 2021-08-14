@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>details</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="icons.css"> -->
+    <style type="text/css">
+
+  body {
+	  font-family: 'Courgette', cursive;
+    background-image: url("/images/back4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+table {
+	width: 600px;
+  /* height: 600px; */
+  /* margin: 7% 27%; */
+	background:white;
+  color:black;
+  border-radius:25px;
+	padding: 10px;
+  margin: 40px 0px 40px 250px;
+}
+
+.label {
+	/* width: 150px; */
+	font-weight: bold;
+}
+.label, .to, .subject, .date, .time, .body {
+	font-size:20px;
+}
+.details-td {
+	white-space: normal;
+	padding: 10px;
+	padding-right: 15px;
+
+}
+.table_legenda {
+  table-layout: fixed;
+}
+.table_legenda td {
+  word-wrap: break-word;
+}
+h1{
+  font-size: 40px;
+}
+center{
+    margin-right: 50%;
+}
+      </style>
+  </head>
+  <body>
+
+    <!-- <ul class="redesSociais"> -->
+              <!-- <li class="pinterest"><img src="1.jpeg" height="150" alt=""/></li>
+              <li class="facebook"><img src="2.png" alt="" /></li>
+              <li class="twitter"><img src="4.jpeg" height="180" alt="" /></li> -->
+              <!-- <li class="googleplus"><img src="12.jpeg" height="300" alt="" /></li> -->
+              <!-- <li class="skype"><img src="5.png" height="250" alt="" /></li> -->
+              <!-- <li class="eighteen"><img src="5.jpeg" height="150" alt="" /></li>
+              <li class="nineteen"><img src="6.jpeg" height="150" alt="" /></li>
+              <li class="twenty"><img src="7.jpeg" height="400" alt="" /></li>
+              <li class="twenty1"><img src="11.jpeg" height="150" alt="" /></li> -->
+              <!-- <li class="twenty2"><img src="9.jpeg" height="120" alt="" /></li> -->
+              <!-- <li class="twenty3"><img src="10.jpeg" height="200" alt="" /></li> -->
+              <!-- <li class="twenty4"><img src="11.jpeg" height="100" alt="" /></li> -->
+              <!-- <li class="twenty9"><img src="12.jpeg" height="150" alt="" /></li> -->
+              <!-- <li class="thirty"><img src="7.jpeg" height="120" alt="" /></li>
+              <li class="thirty1"><img src="1.jpeg" height="100" alt="" /></li>
+              <li class="thirty2"><img src="4.jpeg" height="200" alt="" /></li>
+              <li class="thirty4"><img src="12.jpeg" height="90" alt="" /></li>
+              <li class="table">  -->
+                 <table class="table_legenda">
+                <tr>
+                  <th><h1 align="center">Details</h1>
+              <tr>
+                    <% if(message) { %>
+                <td class="details-td">
+                  <div class="label">To</div> <div class="to"><%= message.receiverNo %></div>
+                  <br><div class="label">Subject</div> <div class="subject"><%= message.subject %></div>
+                  <br><div class="label">Date</div> <div class="date"><%= message.date %></div>
+                  <br><div class="label">Time</div> <div class="time"><%= message.time %></div>
+                  <br><div class="label">Body</div> <div class="body"><%= message.body %></div>
+                </td>
+                <% } %>
+                <% if(email) { %>
+                    <td class="details-td">
+                      <div class="label">To</div> <div class="to"><%= email.to %></div>
+                      <br><div class="label">Subject</div> <div class="subject"><%= email.subject %></div>
+                      <br><div class="label">Date</div> <div class="date"><%= email.date %></div>
+                      <br><div class="label">Time</div> <div class="time"><%= email.time %></div>
+                      <br><div class="label">Body</div> <div class="body"><%= email.text %></div>
+                    </td>
+                    <% } %>
+                    
+            </table>
+           <center><a href="/dashboard"><button class="btn btn-primary">Go Back</button></a></center> 
+        </li>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+      
+            <!-- </ul>
+
+            <ul class="redesSociais">
+                      <li class="one"><img src="5.jpeg" height="250" alt=""/></li>
+                      <li class="two"><img src="6.jpeg" height="" alt="" /></li> -->
+                      <!-- <li class="three"><img src="7.jpeg" height="150" alt="" /></li>
+                      <li class="four"><img src="11.jpeg" height="200" alt="" /></li> -->
+                      <!-- <li class="five"><img src="5.jpeg" height="150" alt="" /></li> -->
+                      <!-- <li class="twenty5"><img src="5.png" height="175" alt="" /></li>
+                      <li class="twenty6"><img src="14.png" height="270" alt="" /></li>
+                      <li class="twenty7"><img src="10.jpeg" height="130" alt="" /></li>
+                      <li class="twenty8"><img src="11.jpeg" height="150" alt="" /></li> -->
+                      <!-- <li class="thirty5"><img src="4.jpeg" height="170" alt="" /></li>
+                      <li class="thirty6"><img src="5.png" height="110" alt="" /></li>
+                      <li class="thirty7"><img src="2.png" height="150" alt="" /></li> -->
+                      <!-- <li class="thirty8"><img src="12.jpeg" height="150" alt="" /></li> -->
+
+
+                    <!-- </ul>
+
+            <ul class="redesSociais">
+                      <li class="six"><img src="1.jpeg" height="180" alt=""/></li>
+                      <li class="seven"><img src="12.jpeg" height="160" alt="" /></li> -->
+                      <!-- <li class="eight"><img src="4.jpeg" alt="" /></li> -->
+                      <!-- <li class="nine"><img src="5.png" height="400" alt="" /></li>
+                      <li class="ten"><img src="10.jpeg" height="" alt="" /></li> -->
+                      <!-- <li class="sixteen"><img src="2.png" height="150" alt="" /></li>
+                      <li class="seventeen"><img src="5.png" height="200" alt="" /></li>
+                    </ul>
+            <ul class="redesSociais">
+                      <li class="eleven"><img src="7.jpeg" height="170" alt=""/></li> -->
+                      <!-- <li class="twelve"><img src="11.jpeg" height="280" alt="" /></li> -->
+                      <!-- <li class="thirteen"><img src="9.jpeg"  alt="" /></li>
+                      <li class="fourteen"><img src="1.jpeg" height="200"  alt="" /></li>
+                      <li class="fifteen"><img src="5.jpeg" height="200" alt="" /></li>
+                    </ul> -->
+
+
+
+
+  </body>
+</html>
+
+
+<!-- <% if(message) { %>
+    <div class="container">
+     To : <%= message.receiverNo %> 
+     <br>  
+     Subject :   <%= message.subject %>
+     <br>
+     Body : <%= message.body %> 
+    </div>
+    <% } %>
+    <% if(email) { %>
+    <div class="container">
+    To : <%= email.to %> 
+    <br>  
+    Subject :   <%= email.subject %>
+    <br>
+    Body : <%= email.text %> 
+    </div>
+    <% } %>     -->

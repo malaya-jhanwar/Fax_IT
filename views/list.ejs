@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule Table Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+      <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+
+<style>
+  // Colors are from https://codepen.io/tennowman/pen/EaarZe
+
+$border-color: #ebedf2;
+$title-color: #ffffff;
+
+.green { background-color: #2ecc71; }
+.turquoise { background-color: #1abc9c; }
+.navy { background-color: #34495e; }
+.blue { background-color: #3498db; }
+.purple { background-color: #9b59b6; }
+.grey { background-color: #bdc3c7; color: #202020; }
+.gray { background-color: #7f8c8d; }
+.red { background-color: #e74c3c; }
+.orange { background-color: #f39c12; }
+.yellow { background-color: #f1c40f; color: #303030; }
+
+
+
+.button1 {
+  background-color: blue;
+  color: white;
+  font-size: 12px;
+  border: 1px solid skyblue;
+}
+
+.button1:hover {
+  background-color: #007FFF;
+  color: white;
+}
+
+
+.day-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  .day-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 400px;
+    min-width: 160px;
+    border: 1px solid $border-color;
+    border-left: none;
+    &:first-child {
+      border-left: 1px solid $border-color;
+    }
+    .day-header {
+      border-bottom: 1px solid $border-color;
+      text-align: center;
+      padding: 5px;
+      color: $title-color;
+    }
+    .day-content {
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 5px;
+      overflow-y: auto;
+      .event {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        padding: 3px;
+        color: white;
+        padding: 5px;
+        box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08);
+        .title {
+          font-size: 12px;
+        }
+        footer {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          font-size: 11px;
+        }
+      }
+    }
+    .day-footer {
+      border-top: 1px solid $border-color;
+      padding: 5px;
+      text-align: center;
+      font-size: 13px;
+      color: darken($title-color, 20%);
+    }
+  }
+}
+
+.container {
+  margin-top: 20px;
+  // border: 1px solid $border-color;
+}
+
+
+.green {
+  background-color: #2ecc71;
+}
+
+.turquoise {
+  background-color: #1abc9c;
+}
+
+.navy {
+  background-color: #34495e;
+}
+
+.blue {
+  background-color: #3498db;
+}
+
+.purple {
+  background-color: #9b59b6;
+}
+
+.grey {
+  background-color: #bdc3c7;
+  color: #202020;
+}
+
+.gray {
+  background-color: #7f8c8d;
+}
+
+.red {
+  background-color: #e74c3c;
+}
+
+.orange {
+  background-color: #f39c12;
+}
+
+.yellow {
+  background-color: #f1c40f;
+  color: #303030;
+}
+
+.day-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+}
+.day-columns .day-column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 400px;
+  min-width: 160px;
+  border: 1px solid #ebedf2;
+  border-left: none;
+}
+.day-columns .day-column:first-child {
+  border-left: 1px solid #ebedf2;
+}
+.day-columns .day-column .day-header {
+  border-bottom: 1px solid #ebedf2;
+  text-align: center;
+  padding: 5px;
+  color: #898b96;
+}
+.day-columns .day-column .day-content {
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px;
+  overflow-y: auto;
+}
+.day-columns .day-column .day-content .event {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 3px;
+  color: white;
+  padding: 5px;
+  box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08);
+}
+.day-columns .day-column .day-content .event .title {
+  font-size: 12px;
+}
+.day-columns .day-column .day-content .event footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 11px;
+}
+.day-columns .day-column .day-footer {
+  border-top: 1px solid #ebedf2;
+  padding: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #575962;
+  
+}
+
+.container {
+  margin-top: 20px;
+}
+</style>
+
+</head>
+
+<body style="background-image: url(/images/bg.jpg);background-size:cover ">
+  <div>
+    <center><h1 style="font-family: 'Lobster Two', cursive; font-size: 70px; color: gray">My List</h1></center>
+  </div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="row day-columns">
+        <div class="day-column">
+          <div class="day-header">31st Dec, 2018</div>
+          <div class="day-content">
+            
+
+          </div>
+          <div class="day-footer"><b>0 tasks</b></div>
+        </div>
+        <div class="day-column">
+          <div class="day-header">1st Jan, 2019</div>
+          <div class="day-content">
+              <% if(messages) { %>
+                <% for(var i=0;i<messages.length;i++) { %>
+            <div class="event red">
+                <span class="title"><%= messages[i].subject %></span>
+                <span> <%= messages[i].time %> </span>
+                <footer>
+                    <a href="/details/<%= messages[i]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/sms/<%= messages[i].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                </footer>
+            </div>
+            <% } %>
+            <% } %>
+            <% if(Email) { %>
+              <% for(var j=0;j<Email.length;j++) { %>
+                  
+            <div class="event purple">
+                <span class="title"><%= Email[j].subject %></span>
+                  <span><%= Email[j].time %></span>
+
+                  <footer>
+                  <a href="/details/<%= Email[j]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/emails/<%= Email[j].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                  </footer>
+              
+            </div>
+
+            <% } %>
+            <% } %>
+          </div>
+          <div class="day-footer"><b><%= messages.length + Email.length %> Tasks</b></div>
+          </div>
+        <div class="day-column">
+          <div class="day-header">2nd Jan, 2019</div>
+          <div class="day-content">
+              <% if(messages2) { %>
+                <% for(var i=0;i<messages2.length;i++) { %>
+            <div class="event red">
+                <span class="title"><%= messages2[i].subject %></span>
+                <span> <%= messages2[i].time %> </span>
+                <footer>
+                    <a href="/details/<%= messages2[i]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/sms/<%= messages2[i].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                </footer>
+            </div>
+            <% } %>
+            <% } %>
+            <% if(emails2) { %>
+              <% for(var j=0;j<emails2.length;j++) { %>
+                  
+            <div class="event purple">
+                <span class="title"><%= emails2[j].subject %></span>
+                  <span><%= emails2[j].time %></span>
+
+                  <footer>
+                  <a href="/details/<%= emails2[j]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/emails/<%= emails2[j].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                  </footer>
+              
+            </div>
+
+            <% } %>
+            <% } %>
+          </div>
+          <div class="day-footer"><b><%= messages2.length + emails2.length %> Tasks</b></div>
+        </div>
+        <div class="day-column">
+          <div class="day-header">3rd Jan, 2019</div>
+          <div class="day-content">
+              <% if(messages3) { %>
+                <% for(var i=0;i<messages3.length;i++) { %>
+            <div class="event red">
+                <span class="title"><%= messages3[i].subject %></span>
+                <span> <%= messages3[i].time %> </span>
+                <footer>
+                    <a href="/details/<%= messages3[i]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/sms/<%= messages3[i].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                </footer>
+            </div>
+            <% } %>
+            <% } %>
+            <% if(emails3) { %>
+              <% for(var j=0;j<emails3.length;j++) { %>
+                  
+            <div class="event purple">
+                <span class="title"><%= emails3[j].subject %></span>
+                  <span><%= emails3[j].time %></span>
+
+                  <footer>
+                  <a href="/details/<%= emails3[j]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/emails/<%= emails3[j].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                  </footer>
+              
+            </div>
+
+            <% } %>
+            <% } %>
+
+          </div>
+          <div class="day-footer"><b><%= messages3.length + emails3.length %> Tasks</b></div>
+        </div>
+        <div class="day-column">
+          <div class="day-header">4th Jan, 2019</div>
+          <div class="day-content">
+              <% if(messages4) { %>
+                <% for(var i=0;i<messages4.length;i++) { %>
+            <div class="event red">
+                <span class="title"><%= messages4[i].subject %></span>
+                <span> <%= messages4[i].time %> </span>
+                <footer>
+                    <a href="/details/<%= messages4[i]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/sms/<%= messages4[i].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                </footer>
+            </div>
+            <% } %>
+            <% } %>
+            <% if(emails4) { %>
+              <% for(var j=0;j<emails4.length;j++) { %>
+                  
+            <div class="event purple">
+                <span class="title"><%= emails4[j].subject %></span>
+                  <span><%= emails4[j].time %></span>
+
+                  <footer>
+                  <a href="/details/<%= emails4[j]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/emails/<%= emails4[j].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                  </footer>
+              
+            </div>
+
+            <% } %>
+            <% } %>
+
+          </div>
+          <div class="day-footer"><b><%= messages4.length + emails4.length %> Tasks</b></div>
+        </div>
+        <div class="day-column">
+          <div class="day-header">5th Jan, 2019</div>
+          <div class="day-content">
+              <% if(messages5) { %>
+                <% for(var i=0;i<messages5.length;i++) { %>
+            <div class="event red">
+                <span class="title"><%= messages5[i].subject %></span>
+                <span> <%= messages5[i].time %> </span>
+                <footer>
+                    <a href="/details/<%= messages5[i]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/sms/<%= messages5[i].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                </footer>
+            </div>
+            <% } %>
+            <% } %>
+            <% if(emails5) { %>
+              <% for(var j=0;j<emails5.length;j++) { %>
+                  
+            <div class="event purple">
+                <span class="title"><%= emails5[j].subject %></span>
+                  <span><%= emails5[j].time %></span>
+
+                  <footer>
+                  <a href="/details/<%= emails5[j]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/emails/<%= emails5[j].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                  </footer>
+              
+            </div>
+
+            <% } %>
+            <% } %>
+          </div>
+          <div class="day-footer"><b><%= messages5.length + emails5.length %> Tasks</b></div>
+        </div>
+        <div class="day-column">
+          <div class="day-header">6th Jan, 2019</div>
+          <div class="day-content">
+              <% if(messages6) { %>
+                <% for(var i=0;i<messages6.length;i++) { %>
+            <div class="event red">
+                <span class="title"><%= messages6[i].subject %></span>
+                <span> <%= messages6[i].time %> </span>
+                <footer>
+                    <a href="/details/<%= messages6[i]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/sms/<%= messages6[i].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                </footer>
+            </div>
+            <% } %>
+            <% } %>
+            <% if(emails6) { %>
+              <% for(var j=0;j<emails6.length;j++) { %>
+                  
+            <div class="event purple">
+                <span class="title"><%= emails6[j].subject %></span>
+                  <span><%= emails6[j].time %></span>
+
+                  <footer>
+                  <a href="/details/<%= emails6[j]._id %>"><span><button class="button button1">View</button></span></a>
+                  <a href="/delete/emails/<%= emails6[j].uniqueId %>"><span><button class="button button1">x</button></span></a>
+                  </footer>
+              
+            </div>
+
+            <% } %>
+            <% } %>
+          </div>
+          <div class="day-footer"><b><%= messages6.length + emails6.length %> Tasks</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</br></br>
+<center><a href="/menu"><button class="btn btn-primary">Go To Menu</button></a></center>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

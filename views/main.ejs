@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</head>
+<body>
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Socio-Path</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li class="active">  <a href="#">  Home  </a>  </li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="http://www.google.com">Redirect to Google</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Net Worth</a></li>
+                      </ul>
+                    </li>
+                    <!-- <li><span>HELLO</span><span id="username"> </span></li>
+                    <li id="bal"> <span>AVAILABLE BALANCE</span><span id="availbal"></span></div></li> -->
+                    <!-- <li >  <a href="#"> Sign Up  </a>  </li> -->
+                    <!-- <li data-toggle="modal" data-target="#myModal"><a>SIGN</a></li> -->
+                    
+                    <li id="but"> <a href="./signup.html"><button type="button" id="btsignup" class="btn btn-default" style="margin-top: 10%">Sign Up</button></a></li>
+                    <li id="but"> <a href="./form.html"><button type="button" id="addmail" class="btn btn-default" style="margin-top: 10%">Schedule a Mail</button></a></li>
+                    <li id="but"> <a href="./formsms.html"><button type="button" id="addsms" class="btn btn-default" style="margin-top: 10%">Schedule an SMS</button></a></li>
+                    <li id="but"> <a href="./history.html"><button type="button" id="eventslist" class="btn btn-default" style="margin-top: 10%">My Posts</button></a></li>
+                    <div id="leftBalance" style = "align-items: right"> </div>
+                  </ul>
+
+                  <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                        
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <!-- <center><h4 class="modal-title">Enter your details</h4></center> -->
+                            </div>
+                            <div class="modal-body">
+                              
+                              <form action="">
+                                 <center> <h2 style="padding-bottom: 5%">Create your Account</h2></center>
+                                 <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                        <div class="col-sm-10">
+                                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                        <div class="col-sm-10">
+                                          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                        </div>
+                                      </div>
+                                      
+                                  <center><button type="submit" class="btn btn-primary" style="margin-top: 18%" onclick="signup()">Sign Up</button></center>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+              
+                  <!-- <div id="bal"> <span>AVAILABLE BALANCE</span><p id="availbal"></p></div> -->
+                  <!-- <span id =class="navbar-form navbar-right">AVAILABLE BALANCE</span> -->
+              
+              
+                  <!-- <form class="navbar-form navbar-right" action="/action_page.php">
+                    <div class="input-group">
+                      <input type="text" id = "searchKey" class="form-control" placeholder="Search" name="search">
+                      <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                          <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form> -->
+                </div>
+              </nav>
+</body>
+</html>

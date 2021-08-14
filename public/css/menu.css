@@ -1,0 +1,523 @@
+.h1{
+    font-family: 'Bangers', cursive;
+    font-size:150px;
+    color:#800000;
+  }
+  body{
+    background-image: url("/images/bg.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+  }
+    ul.redesSociais {
+      padding-left: 0;
+      width: 620px;
+      height: 100px;
+      position: relative;
+      left: 50%;
+      top: 0px;
+      margin-left: 150px;
+      bottom: 0px;
+      cursor: pointer;
+    }
+    ul.redesSociais li {
+      list-style-position: inside;
+      display: inline;
+      position: absolute;
+      right: 30%;
+      transition: all 500ms;
+    }
+    ul.redesSociais li.pinterest {
+      transform: scale(0.5);
+      position:absolute;
+      right: 310px;
+      top:0px;
+      }
+    ul.redesSociais li.facebook {
+      transform: scale(0.5);
+        position:absolute;
+      right: 295px;
+      top:50px;
+      }
+    ul.redesSociais li.twitter {
+      transform: scale(0.5);
+        position:absolute;
+      right: 370px;
+      top:10px;
+      }
+    ul.redesSociais li.googleplus {
+      transform: scale(0.5);
+        position:absolute;
+      right: 40px;
+      top:10px;
+      }
+    ul.redesSociais li.skype {
+      transform: scale(0.5);
+        position:absolute;
+      right: 180px;
+      top:0px;
+     }
+    ul.redesSociais li.eighteen {
+      transform: scale(0.5);
+        position:absolute;
+      right: 150px;
+      top:5px;
+     }
+    ul.redesSociais li.nineteen {
+      transform: scale(0.5);
+        position:absolute;
+      right: 80px;
+      top:0px;
+     }
+    ul.redesSociais li.twenty {
+      transform: scale(0.5);
+        position:absolute;
+      right: 350px;
+      top:0px;
+    }
+    ul.redesSociais li.twenty1 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 530px;
+      top:10px;
+    }
+    ul.redesSociais li.twenty2 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 580px;
+      top:70px;
+    }
+    ul.redesSociais li.twenty3 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 650px;
+      top:0px;
+    }
+    ul.redesSociais li.twenty4 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 800px;
+      top:0px;
+    }
+    ul.redesSociais li.twenty9 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 900px;
+      top:40px;
+    }
+    ul.redesSociais li.thirty {
+      transform: scale(0.5);
+        position:absolute;
+      right: 1050px;
+      top:10px;
+    }
+    ul.redesSociais li.thirty1 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 750px;
+      top:60px;
+    }
+    ul.redesSociais li.thirty2 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 1210px;
+      top:0px;
+    }
+    ul.redesSociais li.thirty4 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 1320px;
+      top:70px;
+    }
+      ul.redesSociais li.text {
+        transform: scale(0.5);
+          position:absolute;
+        right: 550px;
+        top:0px;
+    }
+      ul.redesSociais li.table {
+        transform: scale(0.5);
+          position:absolute;
+        right: 330px;
+        top:0px;
+      }
+      p{
+        color: black;
+        font-size: 80px;
+    font-family: 'Signika', sans-serif;
+      }
+    ul.redesSociais li.button {
+      transform: scale(0.5);
+        position:absolute;
+      right: 730px;
+      top:250px;
+    }
+    ul.redesSociais li.button1 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 730px;
+      top:100px;
+    }
+    ul.redesSociais li.button2 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 730px;
+      top:180px;
+    }
+    ul.redesSociais li.button3 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 730px;
+      top:260px;
+    }
+    ul.redesSociais li.button4 {
+      transform: scale(0.5);
+        position:absolute;
+      right: 730px;
+      top:340px;
+    }
+    .style{
+      width:510px;
+      border-radius: 25px;
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 80px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: bold;
+      outline: none;
+      color: #fff;
+      background-color: blue;
+      border: none;
+      box-shadow: 0 5px navy;
+    font-family: 'Signika', sans-serif;
+    }
+    .style2{
+      width:510px;
+      border-radius: 25px;
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 60px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: bold;
+      outline: none;
+      color: #fff;
+      background-color: blue;
+      border: none;
+      box-shadow: 0 5px navy;
+    font-family: 'Signika', sans-serif;
+    }
+   button:hover {background-color: #1b8bcc}
+  
+  
+  ul.redesSociais li.one {
+      transform: scale(0.5);
+      position:absolute;
+      right: 50px;
+      top:40px;
+    }
+    ul.redesSociais li.two {
+      transform: scale(0.5);
+        position:absolute;
+      right:160px;
+      top:0px;
+    }
+    ul.redesSociais li.three {
+      transform: scale(0.5);
+        position:absolute;
+      right: 260px;
+      top:0px;
+    }
+    ul.redesSociais li.four {
+      transform: scale(0.5);
+        position:absolute;
+      right: 270px;
+      top:45px;
+    }
+    ul.redesSociais li.five {
+      transform: scale(0.5);
+        position:absolute;
+      right:365px;
+      top:45px;
+    }
+    ul.redesSociais li.twenty5 {
+      transform: scale(0.5);
+        position:absolute;
+      right:375px;
+      top:95px;
+    }
+    ul.redesSociais li.twenty6 {
+      transform: scale(0.5);
+        position:absolute;
+      right:370px;
+      top:130px;
+    }
+    ul.redesSociais li.twenty7 {
+      transform: scale(0.5);
+        position:absolute;
+      right:470px;
+      top:130px;
+    }
+    ul.redesSociais li.twenty8 {
+      transform: scale(0.5);
+        position:absolute;
+      right:510px;
+      top:150px;
+    }
+    ul.redesSociais li.thirty5 {
+      transform: scale(0.5);
+        position:absolute;
+      right:1300px;
+      top:40px;
+    }
+    ul.redesSociais li.thirty6 {
+      transform: scale(0.5);
+        position:absolute;
+      right:1300px;
+      top:130px;
+    }
+    ul.redesSociais li.thirty7 {
+      transform: scale(0.5);
+        position:absolute;
+      right:1260px;
+      top:250px;
+    }
+    ul.redesSociais li.thirty8 {
+      transform: scale(0.5);
+        position:absolute;
+      right:500px;
+      top:300px;
+    }
+    ul.redesSociais li.logo {
+      transform: scale(0.5);
+        position:absolute;
+      right:1000px;
+      top:80px;
+    }
+    .h2{
+    font-family: 'Courgette', cursive;
+      font-size:110px;
+      color:#800000;
+    }
+  
+  
+    ul.redesSociais li.six {
+      transform: scale(0.5);
+      position:absolute;
+      right: 150px;
+      top:0px;
+    }
+    ul.redesSociais li.seven{
+      transform: scale(0.5);
+        position:absolute;
+      right:230px;
+      top:0px;
+    }
+    ul.redesSociais li.eight {
+      transform: scale(0.5);
+        position:absolute;
+      right: 180px;
+      top:50px;
+    }
+    ul.redesSociais li.nine{
+      transform: scale(0.5);
+        position:absolute;
+      right: 200px;
+      top:40px;
+    }
+    ul.redesSociais li.ten {
+      transform: scale(0.5);
+        position:absolute;
+      right: 290px;
+      top:10px;
+    }
+    ul.redesSociais li.sixteen {
+      transform: scale(0.5);
+        position:absolute;
+      right: 70px;
+      top:50px;
+    }
+    ul.redesSociais li.seventeen {
+      transform: scale(0.5);
+        position:absolute;
+      right: 110px;
+      top:60px;
+    }
+  
+  
+  ul.redesSociais li.eleven {
+      transform: scale(0.5);
+      position:absolute;
+      right: 70px;
+      top:0px;
+    }
+    ul.redesSociais li.twelve {
+      transform: scale(0.5);
+        position:absolute;
+      right:100px;
+      top:10px;
+    }
+    ul.redesSociais li.thirteen {
+      transform: scale(0.5);
+        position:absolute;
+      right: 40px;
+      top:65px;
+    }
+    ul.redesSociais li.fourteen {
+      transform: scale(0.5);
+        position:absolute;
+      right: 200px;
+      top:130px;
+    }
+    ul.redesSociais li.fifteen {
+      transform: scale(0.5);
+        position:absolute;
+      right: 110px;
+      top:160px;
+    }
+  
+  
+    ul.redesSociais:hover li.pinterest {
+      right: 150px;
+      top:5px;
+    }
+    ul.redesSociais:hover li.facebook {
+      right: 190px;
+      top:0px;
+    }
+    ul.redesSociais:hover li.twitter {
+      right: 520px;
+      top:10px;
+    }
+    ul.redesSociais:hover li.googleplus {
+      right: 80px;
+      top:0px;
+    }
+    ul.redesSociais:hover li.skype {
+      right: 290px;
+      top:50px;
+    }
+    ul.redesSociais:hover li.eighteen {
+      right: 310px;
+      top:0px;
+    }
+    ul.redesSociais:hover li.nineteen {
+      right: 40px;
+      top:10px;
+    }
+    ul.redesSociais:hover li.twenty {
+      right: 400px;
+      top:30px;
+    }
+    ul.redesSociais:hover li.twenty1 {
+      right: 385px;
+      top:10px;
+    }
+    ul.redesSociais:hover li.twenty2 {
+      right: 350px;
+      top:0px;
+    }
+  
+  
+    ul.redesSociais:hover li.one {
+      right: 190px;
+      top:0px;
+    }
+    ul.redesSociais:hover li.two {
+      right: 270px;
+      top:70px;
+    }
+    ul.redesSociais:hover li.three {
+      right: 310px;
+      top:20px;
+    }
+    ul.redesSociais:hover li.four {
+      right: 80px;
+      top:75px;
+    }
+    ul.redesSociais:hover li.five {
+      right: 145px;
+      top:180px;
+    }
+    ul.redesSociais:hover li.twenty5 {
+      right: 430px;
+      top:110px;
+    }
+    ul.redesSociais:hover li.twenty6 {
+      right: 500px;
+      top:100px;
+    }
+    ul.redesSociais:hover li.twenty7 {
+      right: 400px;
+      top:100px;
+    }
+    ul.redesSociais:hover li.twenty8 {
+      right: 410px;
+      top:180px;
+    }
+    ul.redesSociais:hover li.thirty8 {
+      right: 440px;
+      top:260px;
+    }
+  
+  
+    ul.redesSociais:hover li.six {
+      right: 190px;
+      top:0px;
+    }
+    ul.redesSociais:hover li.seven{
+      right: 240px;
+      top:130px;
+    }
+    ul.redesSociais:hover li.eight {
+      right: 310px;
+      top:20px;
+    }
+    ul.redesSociais:hover li.nine {
+      right: 230px;
+      top:60px;
+    }
+    ul.redesSociais:hover li.ten {
+      right: 230px;
+      top:40px;
+    }
+    ul.redesSociais:hover li.sixteen {
+      right: 170px;
+      top:80px;
+    }
+    ul.redesSociais:hover li.seventeen {
+      right: 70px;
+      top:40px;
+    }
+  
+  
+  
+    ul.redesSociais:hover li.eleven {
+      right: 190px;
+      top:30px;
+    }
+    ul.redesSociais:hover li.twelve{
+      right: 230px;
+      top:110px;
+    }
+    ul.redesSociais:hover li.thirteen {
+      right: 130px;
+      top:70px;
+    }
+    ul.redesSociais:hover li.fourteen {
+      right: 70px;
+      top:40px;
+    }
+    ul.redesSociais:hover li.fifteen {
+      right: 145px;
+      top:180px;
+    }
+  
+  
+  
+    img{
+      border-radius: 50%;
+    }
+    .square{
+      border-radius:0%;
+    }
